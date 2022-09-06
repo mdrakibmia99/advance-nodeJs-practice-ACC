@@ -13,7 +13,7 @@ const events =require("events")
     console.log('hello all how are you??')
  }
 //  assign a handler into an event
-eventEmitter.on('scream',hello).hello
+eventEmitter.on('scream',hello)
 // firing the event 
 eventEmitter.emit('scream')
 

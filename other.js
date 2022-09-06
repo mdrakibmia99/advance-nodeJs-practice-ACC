@@ -5,4 +5,3 @@ const  tori = (first,second)=>{
 module.exports ={name,tori}
 
 
-;
