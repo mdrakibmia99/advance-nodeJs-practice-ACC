@@ -16,4 +16,8 @@ setTimeout(()=>{
     console.log('steaming is pause')
 }
 
-    ,10)
+    ,6)
+    setTimeout(()=>{
+        readStream.resume()
+        console.log('steaming is resume')
+    },5000)
