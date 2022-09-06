@@ -3,9 +3,30 @@
  const http =require("http");
  const url =require("url");
  const fs=require("fs");
+ 
+//  events start
+const events =require("events")
+//  create a instant
+ const eventEmitter=new events.EventEmitter();
+//   creating a event handleer 
+ const hello = ()=>{
+    console.log('hello all how are you??')
+ }
+//  assign a handler into an event
+eventEmitter.on('scream',hello).hello
+// firing the event 
+eventEmitter.emit('scream')
+
+//  events end
 
 
 const server =http.createServer((req,res)=>{
+
+
+
+
+
+
     // res.end(console.log(req.url))
     //  route or after change url 
     // if(req.url === '/'){
@@ -41,15 +62,15 @@ const server =http.createServer((req,res)=>{
 // res.end(readfile);
 
 //  write file system
- fs.writeFile('rakib2.txt',"hello this is rakib",(err)=>{
-    if(err){
-        res.write("data filed to write")
-        res.end()
-    }else{
-        res.write('data written successfully')
-        res.end();
-    }
- })
+//  fs.writeFile('rakib2.txt',"hello this is rakib",(err)=>{
+//     if(err){
+//         res.write("data filed to write")
+//         res.end()
+//     }else{
+//         res.write('data written successfully')
+//         res.end();
+//     }
+//  })
 
 })
 // console.log(url);
